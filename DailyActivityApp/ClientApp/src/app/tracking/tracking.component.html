@@ -5,14 +5,25 @@
     <title></title>
 </head>
 <body>
+  <form>
+    <div class="form-group">
+      <label for="chartSelect">
+        Chart type
+      </label>
+      <select class="form-control" id="chartSelect" [formControl]="name">
+        <option>Bar Chart</option>
+        <option>Pie Chart</option>
+      </select>
+    </div>
+  </form>
   <div>
     <div style="display: block">
       <canvas baseChart
-              [datasets]="barChartData"
-              [labels]="barChartLabels"
-              [options]="barChartOptions"
-              [legend]="barChartLegend"
-              [chartType]="barChartType"></canvas>
+              [datasets]="chartData"
+              [labels]="chartLabels"
+              [options]="chartOptions"
+              [legend]="chartLegend"
+              [chartType]="chartType"></canvas>
     </div>
   </div>
 </body>
