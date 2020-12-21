@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-  <form>
+  <!--<form>
     <div class="form-group">
       <label for="chartSelect">
         Chart type
@@ -15,16 +15,26 @@
         <option>Pie Chart</option>
       </select>
     </div>
-  </form>
-  <div>
-    <div style="display: block">
+  </form>-->
+    <!--<div style="display: block">
+    <canvas baseChart
+            [datasets]="chartData"
+            [labels]="chartLabels"
+            [options]="chartOptions"
+            [legend]="chartLegend"
+            [chartType]="chartType"></canvas>
+  </div>-->
+
+    <div class="chart-wrapper">
       <canvas baseChart
-              [datasets]="chartData"
-              [labels]="chartLabels"
-              [options]="chartOptions"
-              [legend]="chartLegend"
-              [chartType]="chartType"></canvas>
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugins"
+              [legend]="pieChartLegend">
+      </canvas>
     </div>
-  </div>
+
 </body>
 </html>
