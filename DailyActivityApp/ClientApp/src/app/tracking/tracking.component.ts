@@ -14,7 +14,7 @@ export class TrackingComponent {
   public pieChartOptions: ChartOptions = {
     responsive: true,
   };
-  public pieChartLabels: Label[] = [['SciFi'], ['Drama'], 'Comedy'];
+  public pieChartLabels: Label[] = ['X', 'Y', 'Z'];
   public pieChartData: SingleDataSet = [30, 50, 20];
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
@@ -24,6 +24,12 @@ export class TrackingComponent {
     monkeyPatchChartJsTooltip();
     monkeyPatchChartJsLegend();
   }
+
+  public refreshData() {
+    this.pieChartData = [30, 50, 20, 99];
+    this.pieChartLabels = ['X', 'Y', 'Z', 'NICE'];
+  }
+
 }
 
 
